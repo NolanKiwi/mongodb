@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transaction Search</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <h1>Search Transactions</h1>
+    <form id="searchForm">
+        Customer ID: <input type="text" id="customerId" name="customerId">
+        <!-- Add more search fields as needed -->
+        <button type="submit">Search</button>
+    </form>
+    <table id="transactionsTable">
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Customer ID</th>
+                <th>Total Amount</th>
+                <!-- Add more columns as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Transaction rows will go here -->
+        </tbody>
+    </table>
+    <div>
+        <button onclick="previousPage()">Previous</button>
+        <span id="currentPage">1</span>
+        <button onclick="nextPage()">Next</button>
+    </div>
+    
+    <h2>Search Stores</h2>
+        <form id="searchStoresForm">
+            <button type="submit">Get All Stores</button>
+        </form>
+        <table id="storesTable">
+            <thead>
+                <tr>
+                    <th>Store ID</th>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Store rows will go here -->
+            </tbody>
+        </table>
+        <div>
+            <button onclick="previousPageStores()">Previous</button>
+            <span id="currentStorePage">1</span>
+            <button onclick="nextPageStores()">Next</button>
+        </div>
+
+    <h2>Get All Customers</h2>
+        <form id="fetchCustomersForm">
+            <label for="limitSelect">Results per page:</label>
+            <select id="limitSelect" name="limit">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+            </select>
+            <button type="submit">Fetch Customers</button>
+        </form>
+        <table id="customersTable">
+            <thead>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <!-- Add more columns as needed -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Customer rows will go here -->
+            </tbody>
+        </table>
+        <div>
+            <button onclick="previousPageCustomers()">Previous</button>
+            <span id="currentCustomerPage">1</span>
+            <button onclick="nextPageCustomers()">Next</button>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
