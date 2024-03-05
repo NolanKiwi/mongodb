@@ -117,7 +117,7 @@ function fetchCustomers() {
             tableBody.innerHTML = ''; // Clear previous rows
             data.forEach(customer => {
                 const row = tableBody.insertRow();
-                row.insertCell(0).innerHTML = customer._id;
+                row.insertCell(0).innerHTML = customer.customer_id;
                 row.insertCell(1).innerHTML = customer.name;
                 //row.insertCell(2).innerHTML = customer.email;
                 // Add more cells as needed
